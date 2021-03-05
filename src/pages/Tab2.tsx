@@ -1,4 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import React from 'react';
+import {IonPage, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonRouterOutlet, IonButton, IonMenuButton } from '@ionic/react'
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab2.css';
 
@@ -10,13 +11,36 @@ const Tab2: React.FC = () => {
           <IonTitle>Tab 2</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+
+      <IonMenu side="start" menuId="second" contentId="foo2" id="second">
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu Tab 2</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+
+        </IonList>
+      </IonContent>
+    </IonMenu>
+
+
+      <IonContent fullscreen id="foo2">
+
+      
+
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <IonMenuButton menu="second" id="secondmenue"></IonMenuButton>
       </IonContent>
     </IonPage>
   );
