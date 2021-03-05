@@ -1,12 +1,19 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonContent,
+  IonHeader,
   IonIcon,
+  IonItem,
   IonLabel,
+  IonList,
+  IonMenu,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonTitle,
+  IonToolbar,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
@@ -35,9 +42,30 @@ import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
+
     <IonReactRouter>
+
+
+    <IonMenu side="start" menuId="first" contentId="foo" id="first">
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+        </IonList>
+      </IonContent>
+    </IonMenu>
+
+
       <IonTabs>
-        <IonRouterOutlet>
+        <IonRouterOutlet id="foo">
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
