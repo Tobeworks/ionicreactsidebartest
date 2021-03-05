@@ -45,8 +45,8 @@ const App: React.FC = () => (
 
     <IonReactRouter>
 
-
-    <IonMenu side="start" menuId="first" contentId="foo" id="first">
+{/* First Menue */}
+     <IonMenu side="start" menuId="first" contentId="foo" id="first">
       <IonHeader>
         <IonToolbar color="primary">
           <IonTitle>Start Menu</IonTitle>
@@ -61,11 +61,31 @@ const App: React.FC = () => (
           <IonItem>Menu Item</IonItem>
         </IonList>
       </IonContent>
-    </IonMenu>
+    </IonMenu> 
+
+
+
+{/* Second Menue */}
+     {/* <IonMenu side="start" menuId="second" contentId="foo2" id="second">
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu 2</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+          <IonItem>Menu2 Item</IonItem>
+        </IonList>
+      </IonContent>
+    </IonMenu>  */}
 
 
       <IonTabs>
-        <IonRouterOutlet id="foo">
+        <IonRouterOutlet >
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
@@ -79,6 +99,7 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
+
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={triangle} />

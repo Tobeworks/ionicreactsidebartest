@@ -4,16 +4,16 @@ import './Tab1.css';
 
 const Tab1: React.FC = () => {
   return (
-    <IonPage>
+    <IonPage >
       <IonHeader>
         <IonToolbar>
           <IonButtons>
-            <IonMenuButton></IonMenuButton>
+            <IonMenuButton menu="first"></IonMenuButton>
           </IonButtons>
           <IonTitle>Tab 1</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen id="foo">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
