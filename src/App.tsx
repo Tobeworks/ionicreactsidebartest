@@ -111,14 +111,14 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet >
           <Route exact path="/tab1">
-            {/* <Menu1></Menu1> */}
-            <Menu3 menuId="first" contentId="foo" id="first" />
+            <Menu1></Menu1> 
+            {/* <Menu3 menuId="first" contentId="foo" id="first" /> */}
             <Tab1 />
             
           </Route>
           <Route exact path="/tab2">
-            {/* <Menu2></Menu2> */}
-            <Menu3 menuId="second" contentId="foo2" id="second" />
+             <Menu2></Menu2>
+            {/* <Menu3 menuId="second" contentId="foo2" id="second" /> */}
             <Tab2 />
             
           </Route>
