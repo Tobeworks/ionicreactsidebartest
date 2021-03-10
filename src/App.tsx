@@ -83,23 +83,44 @@ const Menu1 = () => {
   );
 };
 
+const Menu3: React.FC<{menuId:string; contentId:string; id:string}> = props => {
+  return (
+    <IonMenu side="start" menuId={props.menuId} contentId={props.contentId} id={props.id}>
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu ({props.menuId})</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+        </IonList>
+      </IonContent>
+    </IonMenu>
+  );
+};
+
 const App: React.FC = () => (
   <IonApp>
 
     <IonReactRouter>
-
-
-
-
       <IonTabs>
         <IonRouterOutlet >
           <Route exact path="/tab1">
-            <Menu1></Menu1>
+            {/* <Menu1></Menu1> */}
+            <Menu3 menuId="first" contentId="foo" id="first" />
             <Tab1 />
+            
           </Route>
           <Route exact path="/tab2">
-            <Menu2></Menu2>
+            {/* <Menu2></Menu2> */}
+            <Menu3 menuId="second" contentId="foo2" id="second" />
             <Tab2 />
+            
           </Route>
           <Route path="/tab3">
             <Tab3 />
