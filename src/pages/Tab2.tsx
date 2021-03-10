@@ -20,7 +20,7 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonMenuButton menu="second" id="secondmenue"></IonMenuButton>
+        <ExploreContainer name="Tab 2 page" />
       </IonContent>
     </IonPage>
   );
