@@ -40,33 +40,10 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
 
-    <IonReactRouter>
-
-{/* First Menue */}
-     <IonMenu side="start" menuId="first" contentId="foo" id="first">
-      <IonHeader>
-        <IonToolbar color="primary">
-          <IonTitle>Start Menu</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-        <IonList>
-          <IonItem>Menu Item</IonItem>
-          <IonItem>Menu Item</IonItem>
-          <IonItem>Menu Item</IonItem>
-          <IonItem>Menu Item</IonItem>
-          <IonItem>Menu Item</IonItem>
-        </IonList>
-      </IonContent>
-    </IonMenu> 
-
-
-
-{/* Second Menue */}
-     {/* <IonMenu side="start" menuId="second" contentId="foo2" id="second">
+const Menu2 = () => {
+  return (
+    <IonMenu side="end" menuId="second" contentId="foo2" id="second">
       <IonHeader>
         <IonToolbar color="primary">
           <IonTitle>Start Menu 2</IonTitle>
@@ -81,15 +58,47 @@ const App: React.FC = () => (
           <IonItem>Menu2 Item</IonItem>
         </IonList>
       </IonContent>
-    </IonMenu>  */}
+    </IonMenu>
+  );
+};
+
+const Menu1 = () => {
+  return (
+    <IonMenu side="start" menuId="first" contentId="foo" id="first">
+      <IonHeader>
+        <IonToolbar color="primary">
+          <IonTitle>Start Menu</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <IonList>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+          <IonItem>Menu Item</IonItem>
+        </IonList>
+      </IonContent>
+    </IonMenu>
+  );
+};
+
+const App: React.FC = () => (
+  <IonApp>
+
+    <IonReactRouter>
+
+
 
 
       <IonTabs>
         <IonRouterOutlet >
           <Route exact path="/tab1">
+            <Menu1></Menu1>
             <Tab1 />
           </Route>
           <Route exact path="/tab2">
+            <Menu2></Menu2>
             <Tab2 />
           </Route>
           <Route path="/tab3">
